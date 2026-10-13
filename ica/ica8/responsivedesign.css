@@ -11,9 +11,9 @@ body {
     line-height: 1.5;
 }
 
-/*header */
+/* Header */
 
-.site-header {
+header {
     background-color: #303030;
     color: white;
     border: 3px solid #111;
@@ -25,30 +25,29 @@ body {
     gap: 12px;
 }
 
-.site-header h1 {
+.title {
     font-size: 28px;
+    font-weight: bold;
     font-style: italic;
-    margin: 0;
 }
 
-.site-header nav ul {
+header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
 }
 
-.site-header nav a {
+header nav a {
     color: white;
     text-decoration: none;
 }
 
-/* Main content and sidebar */
+/* Main layout */
 
-.page-layout {
+main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
@@ -57,16 +56,16 @@ body {
     border-right: 2px solid #888;
 }
 
-.main-content {
+article {
     min-width: 0;
 }
 
-.main-content h2 {
+article > h1 {
     font-size: 28px;
     margin: 22px 0;
 }
 
-.main-content > p {
+article > p {
     margin: 18px 0;
 }
 
@@ -76,14 +75,17 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
 }
 
-.card {
+.cards li {
     border: 3px solid #111;
     min-width: 0;
 }
 
-.card h3 {
+.cards h2 {
     background-color: #303030;
     color: white;
     font-size: 28px;
@@ -91,12 +93,15 @@ body {
     padding: 14px 30px;
 }
 
-.card p {
+.cards .inner {
     padding: 12px 20px;
+}
+
+.cards .inner p {
     margin: 14px 0;
 }
 
-/* sidebar */
+/* Sidebar */
 
 .sidebar {
     background-color: #303030;
@@ -106,22 +111,21 @@ body {
     min-width: 0;
 }
 
-/* desktop */
+/* Desktop layout */
 
 @media screen and (min-width: 1000px) {
-
-    .site-header {
+    header {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 30px;
     }
 
-    .site-header nav ul {
+    header nav ul {
         gap: 40px;
     }
 
-    .page-layout {
+    main {
         grid-template-columns: minmax(0, 3fr) minmax(280px, 1fr);
         align-items: stretch;
         gap: 16px;
@@ -131,27 +135,22 @@ body {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 16px;
     }
-
-    .sidebar {
-        min-height: 100%;
-    }
 }
 
-/* ipad */
+/* Tablet layout */
 
 @media screen and (min-width: 650px) and (max-width: 999px) {
-
-    .cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .site-header {
+    header {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
-    .site-header nav ul {
+    header nav ul {
         gap: 16px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
