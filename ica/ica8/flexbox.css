@@ -17,9 +17,9 @@ li {
 }
 
 ul {
-  /* Add styles here */
+ display: flex;
 }
 
 li {
-  /* Add styles here */
+  flex: 1;
 }
