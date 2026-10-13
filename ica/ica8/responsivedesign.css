@@ -1,0 +1,157 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 12px 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/*header */
+
+.site-header {
+    background-color: #303030;
+    color: white;
+    border: 3px solid #111;
+    border-radius: 6px 6px 0 0;
+    padding: 22px 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.site-header h1 {
+    font-size: 28px;
+    font-style: italic;
+    margin: 0;
+}
+
+.site-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.site-header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main content and sidebar */
+
+.page-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+    border-left: 2px solid #888;
+    border-right: 2px solid #888;
+}
+
+.main-content {
+    min-width: 0;
+}
+
+.main-content h2 {
+    font-size: 28px;
+    margin: 22px 0;
+}
+
+.main-content > p {
+    margin: 18px 0;
+}
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.card {
+    border: 3px solid #111;
+    min-width: 0;
+}
+
+.card h3 {
+    background-color: #303030;
+    color: white;
+    font-size: 28px;
+    margin: 0;
+    padding: 14px 30px;
+}
+
+.card p {
+    padding: 12px 20px;
+    margin: 14px 0;
+}
+
+/* sidebar */
+
+.sidebar {
+    background-color: #303030;
+    color: white;
+    border: 3px solid #111;
+    padding: 16px 20px;
+    min-width: 0;
+}
+
+/* desktop */
+
+@media screen and (min-width: 1000px) {
+
+    .site-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .site-header nav ul {
+        gap: 40px;
+    }
+
+    .page-layout {
+        grid-template-columns: minmax(0, 3fr) minmax(280px, 1fr);
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .sidebar {
+        min-height: 100%;
+    }
+}
+
+/* ipad */
+
+@media screen and (min-width: 650px) and (max-width: 999px) {
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .site-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .site-header nav ul {
+        gap: 16px;
+    }
+}
