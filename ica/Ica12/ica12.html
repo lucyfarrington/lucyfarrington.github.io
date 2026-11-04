@@ -26,12 +26,13 @@
         </section>
       </div>
       <script>
-          const newBtn = document.querySelector["#js-new-quote"].addEventListener('click', getQuote);
+          const newBtn = document.querySelector("#js-new-quote").addEventListener('click', getQuote);
 
           const endpoint = "https://trivia.cyberwisp.com/getrandomchristmasquestion";
 
           async function getQuote() {
               console.log("This worked!");
+          }
 
               try{
                   const response = await fetch(endpoint);
