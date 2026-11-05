@@ -5,9 +5,7 @@
 
           async function getQuote() {
               console.log("This worked!");
-          }
-
-              try{
+         try{
                   const response = await fetch(endpoint);
                   if (!response.ok) {
                       throw Error(response.statusText)
@@ -20,6 +18,8 @@
                   alert('Failed to fetch new quote');
               }
           }
+
+              
 
           function displayQuote(quote) {
               const quoteText = document.querySelector("#js-quote-text");
