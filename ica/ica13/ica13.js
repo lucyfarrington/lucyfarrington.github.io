@@ -76,6 +76,7 @@ while (balls.length < 25) {
 
   balls.push(ball);
 }   
+  
 //for loop
   function loop() {
   ctx.fillStyle = "rgb(0 0 0 / 25%)";
