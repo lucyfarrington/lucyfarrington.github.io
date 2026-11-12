@@ -76,7 +76,9 @@ while (balls.length < 25) {
     size,
   );
 
+
   balls.push(ball);
+}
   
 //for loop
   function loop() {
