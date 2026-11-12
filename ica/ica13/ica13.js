@@ -16,6 +16,7 @@ function random(min, max) {
 
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+}
   
 // ball class 
   class Ball {
@@ -34,7 +35,6 @@ function randomRGB() {
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.fill();
   }
-    class Ball {
     
   // if classes // when it hits the edge
   update() {
