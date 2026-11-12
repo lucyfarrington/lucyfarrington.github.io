@@ -57,7 +57,6 @@ function randomRGB() {
     this.x += this.velX;
     this.y += this.velY;
   }
-}
   
 }   
   //animating the ball
