@@ -58,6 +58,8 @@ function randomRGB() {
     this.y += this.velY;
   }
 }
+  
+}   
   //animating the ball
  const balls = [];
 
@@ -75,7 +77,6 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
-}   
   
 //for loop
   function loop() {
