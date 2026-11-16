@@ -27,9 +27,6 @@
             --font-primary: 'Saira Semi Condensed',sans-serif;
             --weight-regular: 400
             --weight-semibold: 600
-                h1, h2, h3, h4 {font-family: --font-primary;
-            font-weight: --weight-semibold;
-        }
 
         body, p, li {font-family: --font-primary;
             font-weight: --weight-regular;
@@ -56,6 +53,7 @@
 
         body {
             font-family: var(--font-primary);
+            font-weight: var(--weight-regular);
             line-height: 1.6;
             background-color: var(--color-background);
             color: var(--color-text-dark);
@@ -69,33 +67,33 @@
 
         /* Typography Styles */
         h1 {
-            font-size: 3rem;
-            font-weight: 700;
+            font-size: 4rem;
+            font-weight: --weight-semibold;
             margin-bottom: var(--spacing-md);
             color: var(--color-primary);
         }
 
         h2 {
-            font-size: 2rem;
-            font-weight: 600;
+            font-size: 3rem;
+            font-weight: --weight-semibold;
             margin-bottom: var(--spacing-md);
             color: var(--color-secondary);
         }
 
         h3 {
-            font-size: 1.5rem;
-            font-weight: 500;
+            font-size: 1.75rem;
+            font-weight: --weight-semibold;
             margin-bottom: var(--spacing-sm);
             color: var(--color-accent);
         }
 
         .body-text {
-            font-size: 1rem;
+            font-size: 1.25rem;
             margin-bottom: var(--spacing-md);
         }
 
         .small-text {
-            font-size: 0.75rem;
+            font-size: 1rem;
             color: color-mix(in srgb, var(--color-text-dark) 70%, transparent);
         }
 
